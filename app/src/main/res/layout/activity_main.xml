@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="e.test.roombookingapp.ui.activity.RoomActivity">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:defaultQueryHint="@string/query_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="@string/query_hint" />
+
+
+    <TextView
+        android:id="@+id/tag_today"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_btn_tag_selected"
+        android:fontFamily="@font/mukta_vaani_medium"
+        android:gravity="center"
+        android:text="@string/tag_today"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <TextView
+        android:id="@+id/tag_tomorrow"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_btn_tag"
+        android:fontFamily="@font/mukta_vaani_medium"
+        android:gravity="center"
+        android:text="@string/tag_tomorrow"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tag_today"
+        app:layout_constraintStart_toEndOf="@+id/tag_today"
+        app:layout_constraintTop_toTopOf="@+id/tag_today"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tag_pick_date"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_btn_tag"
+        android:fontFamily="@font/mukta_vaani_medium"
+        android:gravity="center"
+        android:text="@string/tag_pick_date"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tag_tomorrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tag_tomorrow"
+        app:layout_constraintTop_toTopOf="@+id/tag_tomorrow"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tag_selected_date"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_btn_tag_selected"
+        android:fontFamily="@font/mukta_vaani_medium"
+        android:gravity="center"
+        android:text="11/23/2018"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tag_pick_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tag_pick_date"
+        app:layout_constraintTop_toTopOf="@+id/tag_pick_date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag_tomorrow"
+        app:layout_constraintVertical_bias="0.007">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_rooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingBottom="120dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/text_no_result"
+        android:visibility="gone"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mukta_vaani_semibold"
+        android:gravity="center"
+        android:text="@string/query_no_result"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

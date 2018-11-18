@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Room Booking App</string>
+    <string name="endpoint">"https://challenges.1aim.com/roombooking_app/"</string>
+
+    <string name="default_date">"Today"</string>
+
+    <!-- buttons tags -->
+    <string name="tag_today">"Today"</string>
+    <string name="tag_tomorrow">"Tomorrow"</string>
+    <string name="tag_pick_date">"Pick a date"</string>
+    <string name="query_hint">"Try by name"</string>
+
+    <!-- snack messages -->
+    <string name="query_no_result">"Sorry! We can't find any rooms that match this search"</string>
+    <string name="no_internet">"Ups! You don't have internet connection"</string>
+    <string name="error_server">"Sorry! Something went wrong"</string>
+
+    <!-- view strings -->
+    <string name="size_text">"Size"</string>
+    <string name="capacity_text">"Capacity"</string>
+    <string name="equip_text">"Equipment"</string>
+    <string name="select_time_text">"Select time"</string>
+    <string name="book_this_text">"Book this room"</string>
+    <string name="book_text">"Book"</string>
+    <string name="add_partic_text">"Add participants"</string>
+    <string name="concatenate_attendees">%1$s attendees</string>
+
+
+</resources>
