@@ -1,4 +1,4 @@
-# RoomBookingApp - Challenge
+# RoomBookingApp
 
 Platform: Android
 
