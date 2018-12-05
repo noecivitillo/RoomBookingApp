@@ -18,4 +18,3 @@ To handle the calls to the API I used Postman, to make sure that all my data is 
 
 Finally I used Picasso to get the images from the server in a few lines.
 
-I really enjoyed the challenge, I have never constructed something similar to the time bar, and I would have liked to finish the task.
